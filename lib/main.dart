@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khalti_flutter/khalti_flutter.dart';
 import 'package:khalti_integration/dashboard.dart';
 
 void main() {
@@ -11,13 +12,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Khalti Integration Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return KhaltiScope(
+      publicKey: '1ba1c9754164480c8fba70c35e8eddc0',
+      enabledDebugging: true,
+      builder: (context, navKey) => MaterialApp(
+        navigatorKey: navKey,
+        localizationsDelegates: const [KhaltiLocalizations.delegate],
+        title: 'Khalti Integration Demo',
+        darkTheme: ThemeData.dark(),
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: const DashboardScreen(),
       ),
-      home: const DashboardScreen(),
     );
   }
 }
