@@ -45,6 +45,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
           productIdentity: productIdentity,
           productName: productName),
       preferences: [
+        PaymentPreference.khalti,
+        PaymentPreference.mobileBanking,
         PaymentPreference.connectIPS,
         PaymentPreference.eBanking,
         PaymentPreference.sct,
