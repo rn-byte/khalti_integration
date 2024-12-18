@@ -13,25 +13,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
     {
       'id': '#1101',
       'name': 'Product 1',
-      'price': 299.99,
+      'price': 10.0,
       'image': 'assets/promo-banner-1.png'
     },
     {
       'id': '#1102',
       'name': 'Product 2',
-      'price': 499.99,
+      'price': 10.0,
       'image': 'assets/promo-banner-2.png'
     },
     {
       'id': '#1103',
       'name': 'Product 3',
-      'price': 149.99,
+      'price': 10.0,
       'image': 'assets/promo-banner-3.png'
     },
     {
       'id': '#1104',
       'name': 'Product 4',
-      'price': 999.99,
+      'price': 10.0,
       'image': 'assets/promo-banner-1.png'
     },
   ];
@@ -41,7 +41,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     // Placeholder for payment integration
     KhaltiScope.of(context).pay(
       config: PaymentConfig(
-          amount: productPrice.toInt(),
+          amount: productPrice.toInt() * 100,
           productIdentity: productIdentity,
           productName: productName),
       preferences: [
