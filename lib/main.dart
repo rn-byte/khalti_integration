@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return KhaltiScope(
-      publicKey: 'test_public_key_41af29871a6e46a2817eac518f72514e',
+      publicKey: '261a1853c8f546c4aa1108313b46fe7c',
       enabledDebugging: true,
       builder: (context, navKey) => MaterialApp(
         navigatorKey: navKey,
